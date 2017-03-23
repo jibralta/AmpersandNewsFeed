@@ -49,38 +49,6 @@
             endingLineNumber = "16"
             landmarkName = "GoogleAPIManager"
             landmarkType = "3">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Ampersand.GoogleAPIManager.fetchArticle (completion : (Swift.Array&lt;Ampersand.Article&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "Ampersand"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/joyumali/DevProjects_2017/Ampersand/Ampersand/GoogleAPIManager.swift"
-                  timestampString = "511895288.569348"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "19"
-                  endingLineNumber = "19"
-                  offsetFromSymbolStart = "116">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Ampersand.GoogleAPIManager.(fetchArticle (completion : (Swift.Array&lt;Ampersand.Article&gt;) -&gt; ()) -&gt; ()).(closure #1)"
-                  moduleName = "Ampersand"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/joyumali/DevProjects_2017/Ampersand/Ampersand/GoogleAPIManager.swift"
-                  timestampString = "511895288.571478"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "20"
-                  endingLineNumber = "20"
-                  offsetFromSymbolStart = "31">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -97,6 +65,38 @@
             endingLineNumber = "13"
             landmarkName = "GoogleAPIManager"
             landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AmpersandNewsFeed.GoogleAPIManager.apiURL.getter : Swift.String"
+                  moduleName = "AmpersandNewsFeed"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/joyumali/DevProjects_2017/AmpersandNewsFeed/Ampersand/GoogleAPIManager.swift"
+                  timestampString = "511998227.055107"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "41">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AmpersandNewsFeed.GoogleAPIManager.init () -&gt; AmpersandNewsFeed.GoogleAPIManager"
+                  moduleName = "AmpersandNewsFeed"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/joyumali/DevProjects_2017/AmpersandNewsFeed/Ampersand/GoogleAPIManager.swift"
+                  timestampString = "511998227.056384"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "27">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy

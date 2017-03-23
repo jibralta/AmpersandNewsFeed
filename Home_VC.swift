@@ -12,86 +12,84 @@ class Home_VC: UIViewController, UICollectionViewDataSource, UICollectionViewDel
     
     @IBOutlet weak var collectionView: UICollectionView!
     
+    @IBOutlet weak var tabCollectionView: UICollectionView!
+    
+    // MARK: Array of Images for Category Menu. Not pulling image from url.
+    let categoryImages = ["techcrunch", "national-geographic", "espn", "bloomberg", "mashable"]
+    let categoryNames = ["TECHNOLOGY", "SCIENCE & NATURE", "SPORTS", "BUSINESS", "ENTERTAINMENT"]
+    
     var selectIndexPath: IndexPath?
     
-    var articles = [Article]()
+    //    var articles = [Article]()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        private let baseURLString = "https://newsapi.org/v1/articles?source=\(source)google-news&sortBy=top&apiKey=ea22065a86a84832bd357ce90368684f"
-        
-        let categoryManager = GoogleAPIManager()
-        
-        categoryManager.fetchArticle { (articles) in
-            self.articles = articles
-            
-            DispatchQueue.main.async {
-                self.collectionView.reloadData()
-            }
-            
+        DispatchQueue.main.async {
+            self.collectionView.reloadData()
         }
-        
-        //        collectionView.dataSource = categoryManager
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1
-    }
+    // MARK: CollectionView Data Source
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return articles.count
+        if collectionView is TheChosenCollectionView {
+            return categoryImages.count
+        } else {
+            return categoryNames.count
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MainCategoryCell", for: indexPath) as? Category_CollectionViewCell
-        
-        
-        // grab article data for each cell
-        let article = articles[indexPath.row]
-        cell?.articleTitle.text = article.title
-        
-        // grab name of category for category header.  Should this be configured separately from the main colleciton view?
-//        cell?.tabLabel.text = "Test Tab"
-        
-        // Download and display image
-        article.downloadImage { (articles) in
-            cell?.imageView?.image = articles
-        }
-        
-
-        
+        if collectionView is TheChosenCollectionView {
+            
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MainCategoryCell", for: indexPath) as? Category_CollectionViewCell
+            
+            
+            // selects the category image depending on the row selected in indexpath.
+            let image = categoryImages[indexPath.row]
+            cell?.imageView.image = UIImage(named: image)
+            
+            // update category label
+            let categoryName = categoryNames[indexPath.row]
+            cell?.categoryLabel.text = categoryName
+            
             return cell!
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        // user selected an index path
-        selectIndexPath = indexPath
-    
-        // segue into the next view with the chosen article (later will be the category if have time)
-        performSegue(withIdentifier: "ToArticleSegue", sender: self)
-    
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let destination = segue.destination as? SelectedArticle {
-            if let selectIndexPath = selectIndexPath {
-                destination.article = articles[selectIndexPath.row]
-            }
+            
+        } else {
+            
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TabCategoryCell", for: indexPath) as? TabCollectionViewCell
+            
+            // update category label
+            let categoryName = categoryNames[indexPath.row]
+            cell?.tabLabel.text = categoryName
+            
+            return cell!
+            
+            
         }
     }
+    
+    func setCollectionViewDataSourceDelegate<D: UICollectionViewDataSource & UICollectionViewDelegate>
+        (dataSourceDelegate: D, forRow row: Int) {
+        
+        collectionView.delegate = dataSourceDelegate
+        collectionView.dataSource = dataSourceDelegate
+        collectionView.tag = row
+        collectionView.reloadData()
+        
+    }
+    
+    
+    
     
 }
 
 
 
+class TheChosenCollectionView: UICollectionView {}
 
 
 
