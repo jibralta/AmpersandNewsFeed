@@ -13,7 +13,7 @@
         <!--HomeVC-->
         <scene sceneID="DNW-Y9-xrf">
             <objects>
-                <viewController id="cEu-Yi-x6C" customClass="Home_VC" customModule="Ampersand" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="cEu-Yi-x6C" customClass="Home_VC" customModule="AmpersandNewsFeed" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hGn-vr-L1W"/>
                         <viewControllerLayoutGuide type="bottom" id="pfI-QR-xLL"/>
@@ -22,58 +22,52 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="7Yj-bD-xgh" userLabel="Main Collection View">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="7Yj-bD-xgh" userLabel="Main Collection View" customClass="TheChosenCollectionView" customModule="AmpersandNewsFeed" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="2" minimumInteritemSpacing="2" id="QGV-FK-3dM" customClass="CollectionFlowLayout" customModule="Ampersand" customModuleProvider="target">
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="2" minimumInteritemSpacing="2" id="QGV-FK-3dM" customClass="CollectionFlowLayout" customModule="AmpersandNewsFeed" customModuleProvider="target">
                                     <size key="itemSize" width="375" height="667"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="2" minY="0.0" maxX="2" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MainCategoryCell" id="UDz-8K-JaN" customClass="Category_CollectionViewCell" customModule="Ampersand" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" reuseIdentifier="MainCategoryCell" id="UDz-8K-JaN" customClass="Category_CollectionViewCell" customModule="AmpersandNewsFeed" customModuleProvider="target">
                                         <rect key="frame" x="2" y="0.0" width="375" height="667"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5jA-rz-yTs">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="national-geographic" translatesAutoresizingMaskIntoConstraints="NO" id="5jA-rz-yTs">
                                                     <rect key="frame" x="0.0" y="0.0" width="350" height="667"/>
                                                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                 </imageView>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ZHT-US-dhf">
-                                                    <rect key="frame" x="20" y="547" width="255" height="100"/>
-                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="100" id="kbi-4w-kEl"/>
-                                                    </constraints>
-                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="475-oP-VRX">
+                                                    <rect key="frame" x="22" y="549" width="241" height="77"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="25"/>
-                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                                </textView>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                         </view>
                                         <color key="backgroundColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="bottom" secondItem="ZHT-US-dhf" secondAttribute="bottom" constant="20" id="Eko-oh-Rgq"/>
-                                            <constraint firstAttribute="trailing" secondItem="ZHT-US-dhf" secondAttribute="trailing" constant="100" id="JtD-Bw-Rtv"/>
                                             <constraint firstItem="5jA-rz-yTs" firstAttribute="leading" secondItem="UDz-8K-JaN" secondAttribute="leading" id="U5z-qy-MxP"/>
                                             <constraint firstItem="5jA-rz-yTs" firstAttribute="top" secondItem="UDz-8K-JaN" secondAttribute="top" id="XUr-6D-ImD"/>
-                                            <constraint firstItem="ZHT-US-dhf" firstAttribute="leading" secondItem="UDz-8K-JaN" secondAttribute="leading" constant="20" id="ctF-EH-err"/>
                                             <constraint firstAttribute="bottom" secondItem="5jA-rz-yTs" secondAttribute="bottom" id="fVc-3T-d8B"/>
                                             <constraint firstAttribute="trailing" secondItem="5jA-rz-yTs" secondAttribute="trailing" constant="25" id="lVr-mb-sJr"/>
                                         </constraints>
                                         <connections>
-                                            <outlet property="articleTitle" destination="ZHT-US-dhf" id="bBc-DX-zGO"/>
+                                            <outlet property="categoryLabel" destination="475-oP-VRX" id="3LJ-G2-iBi"/>
                                             <outlet property="imageView" destination="5jA-rz-yTs" id="e2T-ha-Suw"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
                                 <connections>
-                                    <outlet property="dataSource" destination="cEu-Yi-x6C" id="Fxn-zo-5mp"/>
-                                    <outlet property="delegate" destination="cEu-Yi-x6C" id="9Jl-rN-k0t"/>
+                                    <outlet property="dataSource" destination="cEu-Yi-x6C" id="R3E-Vs-JUx"/>
+                                    <outlet property="delegate" destination="cEu-Yi-x6C" id="JWK-pd-bf6"/>
                                 </connections>
                             </collectionView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="cvX-tb-7s4" userLabel="Tab Collection View">
@@ -89,7 +83,7 @@
                                     <inset key="sectionInset" minX="5" minY="0.0" maxX="5" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TabCategoryCell" id="h30-fa-dza" customClass="TabCollectionViewCell" customModule="Ampersand" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TabCategoryCell" id="h30-fa-dza" customClass="TabCollectionViewCell" customModule="AmpersandNewsFeed" customModuleProvider="target">
                                         <rect key="frame" x="5" y="0.0" width="155" height="45"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -110,10 +104,6 @@
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
-                                <connections>
-                                    <outlet property="dataSource" destination="cEu-Yi-x6C" id="e26-2U-HW6"/>
-                                    <outlet property="delegate" destination="cEu-Yi-x6C" id="tgd-rq-Gjd"/>
-                                </connections>
                             </collectionView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AmpersandHook" translatesAutoresizingMaskIntoConstraints="NO" id="cva-vm-IBN">
                                 <rect key="frame" x="20" y="35" width="55" height="98"/>
@@ -137,7 +127,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="collectionView" destination="7Yj-bD-xgh" id="9WV-EY-hTJ"/>
+                        <outlet property="collectionView" destination="7Yj-bD-xgh" id="ftU-19-hsB"/>
+                        <outlet property="tabCollectionView" destination="cvX-tb-7s4" id="jP3-gE-VAc"/>
                         <segue destination="iBe-BC-053" kind="show" identifier="ToVerticalFeed" id="jNm-7i-lPj"/>
                     </connections>
                 </viewController>
@@ -166,7 +157,7 @@
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <state key="normal" title="Button" image="backButtonAmper"/>
                                         </button>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="PhotographyTalk_Ampersand" translatesAutoresizingMaskIntoConstraints="NO" id="jln-KZ-Thn">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bloomberg" translatesAutoresizingMaskIntoConstraints="NO" id="jln-KZ-Thn">
                                             <rect key="frame" x="8" y="8" width="359" height="197"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
@@ -204,7 +195,7 @@
         <!--Selected Article-->
         <scene sceneID="2k6-40-hYb">
             <objects>
-                <viewController id="f7v-Hl-Kwy" customClass="SelectedArticle" customModule="Ampersand" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="f7v-Hl-Kwy" customClass="SelectedArticle" customModule="AmpersandNewsFeed" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="vOe-R3-0xY"/>
                         <viewControllerLayoutGuide type="bottom" id="U9i-27-nQz"/>
@@ -248,7 +239,8 @@
     <resources>
         <image name="AmpersandHook" width="356" height="602"/>
         <image name="DISMISS" width="78" height="78"/>
-        <image name="PhotographyTalk_Ampersand" width="1279" height="1024"/>
         <image name="backButtonAmper" width="64" height="108"/>
+        <image name="bloomberg" width="1000" height="1250"/>
+        <image name="national-geographic" width="1279" height="1024"/>
     </resources>
 </document>
