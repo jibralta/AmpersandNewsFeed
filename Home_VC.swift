@@ -118,11 +118,19 @@ class Home_VC: UIViewController, UICollectionViewDataSource, UICollectionViewDel
     
     // MARK: COLLECTION VIEW UI
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 0, left: 10, bottom: -10, right: 0)
+        return UIEdgeInsets(top: 0, left: 10, bottom: 10, right: 0)
     }
     
     
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransition(to: size, with: coordinator)
+        collectionView.collectionViewLayout.invalidateLayout()
+        
+    }
     
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 0.9*view.bounds.size.width, height: 0.8*view.bounds.size.height)
+    }
     // MARK: Segue
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {

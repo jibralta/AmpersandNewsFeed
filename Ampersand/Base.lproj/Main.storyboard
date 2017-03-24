@@ -24,7 +24,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="7Yj-bD-xgh" userLabel="Main Collection View" customClass="TheChosenCollectionView" customModule="Ampersand" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="50" width="568" height="270"/>
+                                <rect key="frame" x="0.0" y="70" width="568" height="250"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <inset key="scrollIndicatorInsets" minX="30" minY="0.0" maxX="30" maxY="0.0"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="I9S-wZ-ADh">
@@ -35,7 +35,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MainCategoryCell" id="UDz-8K-JaN" customClass="Category_CollectionViewCell" customModule="Ampersand" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="-89" width="275" height="478"/>
+                                        <rect key="frame" x="0.0" y="-99" width="275" height="478"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="275" height="478"/>
@@ -100,10 +100,9 @@
                                 </connections>
                             </collectionView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AmpersandHook" translatesAutoresizingMaskIntoConstraints="NO" id="cva-vm-IBN">
-                                <rect key="frame" x="16" y="28" width="41" height="73"/>
+                                <rect key="frame" x="16" y="28" width="23" height="41"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="cva-vm-IBN" secondAttribute="height" multiplier="50:89" id="7EF-aX-fGB"/>
-                                    <constraint firstAttribute="width" constant="41" id="Oug-VA-TIo"/>
                                 </constraints>
                             </imageView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="cvX-tb-7s4" userLabel="Tab Collection View">
@@ -174,13 +173,13 @@
                             <constraint firstItem="cva-vm-IBN" firstAttribute="leading" secondItem="R1v-Xw-sac" secondAttribute="leading" constant="16" id="CNk-h8-Tgq"/>
                             <constraint firstItem="cva-vm-IBN" firstAttribute="top" secondItem="hGn-vr-L1W" secondAttribute="bottom" constant="8" id="GTV-3A-Vye"/>
                             <constraint firstItem="7Yj-bD-xgh" firstAttribute="leading" secondItem="R1v-Xw-sac" secondAttribute="leading" id="KGE-x7-79c"/>
+                            <constraint firstItem="7Yj-bD-xgh" firstAttribute="top" secondItem="hGn-vr-L1W" secondAttribute="bottom" constant="50" id="Ry8-Id-kZV"/>
                             <constraint firstItem="7Yj-bD-xgh" firstAttribute="leading" secondItem="R1v-Xw-sac" secondAttribute="leading" id="UJC-jc-RIl"/>
                             <constraint firstItem="cvX-tb-7s4" firstAttribute="top" secondItem="hGn-vr-L1W" secondAttribute="bottom" constant="90" id="XRN-fg-HYd"/>
                             <constraint firstAttribute="trailing" secondItem="cvX-tb-7s4" secondAttribute="trailing" id="cKe-pR-Iz7"/>
                             <constraint firstAttribute="trailing" secondItem="7Yj-bD-xgh" secondAttribute="trailing" id="d61-hn-Lgg"/>
                             <constraint firstItem="cvX-tb-7s4" firstAttribute="leading" secondItem="cva-vm-IBN" secondAttribute="trailing" constant="38" id="fHG-2e-vTu"/>
-                            <constraint firstItem="pfI-QR-xLL" firstAttribute="top" secondItem="7Yj-bD-xgh" secondAttribute="bottom" id="nmz-Wy-tYS"/>
-                            <constraint firstItem="7Yj-bD-xgh" firstAttribute="top" secondItem="R1v-Xw-sac" secondAttribute="top" constant="50" id="yYc-YE-Ryu"/>
+                            <constraint firstItem="cva-vm-IBN" firstAttribute="width" secondItem="R1v-Xw-sac" secondAttribute="height" multiplier="41:568" id="ozy-ru-Vbt"/>
                             <constraint firstAttribute="trailing" secondItem="7Yj-bD-xgh" secondAttribute="trailing" id="zl0-yu-Iwl"/>
                         </constraints>
                         <variation key="default">
