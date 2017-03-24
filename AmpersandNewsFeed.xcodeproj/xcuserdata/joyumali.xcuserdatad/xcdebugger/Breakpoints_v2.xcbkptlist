@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "VerticalFeed_TVC.swift"
-            timestampString = "512040838.994042"
+            timestampString = "512072176.146978"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "45"
-            endingLineNumber = "45"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
             landmarkName = "tableView(_:numberOfRowsInSection:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "VerticalFeed_TVC.swift"
-            timestampString = "512040838.994042"
+            timestampString = "512072176.146978"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "31"
-            endingLineNumber = "31"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "VerticalFeed_TVC.swift"
-            timestampString = "512040838.994042"
+            timestampString = "512072176.146978"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
             <Locations>
@@ -58,11 +58,11 @@
                   moduleName = "AmpersandNewsFeed"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/joyumali/DevProjects_2017/AmpersandNewsFeed/VerticalFeed_TVC.swift"
-                  timestampString = "512040408.54431"
+                  timestampString = "512074999.448101"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "32"
-                  endingLineNumber = "32"
+                  startingLineNumber = "31"
+                  endingLineNumber = "31"
                   offsetFromSymbolStart = "66">
                </Location>
                <Location
@@ -73,11 +73,11 @@
                   moduleName = "AmpersandNewsFeed"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/joyumali/DevProjects_2017/AmpersandNewsFeed/VerticalFeed_TVC.swift"
-                  timestampString = "512040408.546416"
+                  timestampString = "512074999.44945"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "33"
-                  endingLineNumber = "33"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
                   offsetFromSymbolStart = "12">
                </Location>
             </Locations>
@@ -90,11 +90,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "VerticalFeed_TVC.swift"
-            timestampString = "512040838.994042"
+            timestampString = "512072176.146978"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
             <Locations>
@@ -106,11 +106,11 @@
                   moduleName = "AmpersandNewsFeed"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/joyumali/DevProjects_2017/AmpersandNewsFeed/VerticalFeed_TVC.swift"
-                  timestampString = "512040408.549577"
+                  timestampString = "512074999.452275"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "34"
-                  endingLineNumber = "34"
+                  startingLineNumber = "33"
+                  endingLineNumber = "33"
                   offsetFromSymbolStart = "252">
                </Location>
                <Location
@@ -121,11 +121,11 @@
                   moduleName = "AmpersandNewsFeed"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/joyumali/DevProjects_2017/AmpersandNewsFeed/VerticalFeed_TVC.swift"
-                  timestampString = "512040408.550912"
+                  timestampString = "512074999.453465"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "34"
-                  endingLineNumber = "34"
+                  startingLineNumber = "33"
+                  endingLineNumber = "33"
                   offsetFromSymbolStart = "158">
                </Location>
             </Locations>
@@ -138,11 +138,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "VerticalFeed_TVC.swift"
-            timestampString = "512040838.994042"
+            timestampString = "512072176.146978"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "26"
-            endingLineNumber = "26"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
             <Locations>
@@ -154,11 +154,11 @@
                   moduleName = "AmpersandNewsFeed"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/joyumali/DevProjects_2017/AmpersandNewsFeed/VerticalFeed_TVC.swift"
-                  timestampString = "512040408.554955"
+                  timestampString = "512074999.456376"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "28"
-                  endingLineNumber = "28"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
                   offsetFromSymbolStart = "95">
                </Location>
                <Location
@@ -169,11 +169,11 @@
                   moduleName = "AmpersandNewsFeed"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/joyumali/DevProjects_2017/AmpersandNewsFeed/VerticalFeed_TVC.swift"
-                  timestampString = "512040408.556479"
+                  timestampString = "512074999.45795"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "30"
-                  endingLineNumber = "30"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
                   offsetFromSymbolStart = "19">
                </Location>
             </Locations>
@@ -186,11 +186,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "VerticalFeed_TVC.swift"
-            timestampString = "512040838.994042"
+            timestampString = "512072176.146978"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "27"
-            endingLineNumber = "27"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
@@ -202,27 +202,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "VerticalFeed_TVC.swift"
-            timestampString = "512040838.994042"
+            timestampString = "512072176.146978"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "28"
-            endingLineNumber = "28"
-            landmarkName = "viewDidLoad()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "VerticalFeed_TVC.swift"
-            timestampString = "512040838.994042"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "66"
-            endingLineNumber = "66"
+            startingLineNumber = "75"
+            endingLineNumber = "75"
             landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>

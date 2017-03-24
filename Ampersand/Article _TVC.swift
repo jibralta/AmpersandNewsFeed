@@ -10,14 +10,23 @@ import UIKit
 
 class Article_TVC: UITableViewCell {
     
+    @IBOutlet weak var cardView: UIView!
     @IBOutlet weak var infoLabel: UILabel!
     @IBOutlet weak var verticalTitle: UILabel!
     @IBOutlet weak var verticalImage: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
-    }
+        cardView.layer.shadowColor = UIColor.gray.cgColor
+        cardView.layer.shadowOpacity = 1
+        cardView.layer.shadowOffset = CGSize.zero
+        cardView.layer.shadowRadius = 1.25
+        
+        //    cardView.layer.shadowPath = UIBezierPath(rect: yourView.bounds).cgPath
+        
+        cardView.layer.shouldRasterize = true
+        }
+
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
