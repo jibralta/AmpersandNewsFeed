@@ -31,8 +31,30 @@ class Home_VC: UIViewController, UICollectionViewDataSource, UICollectionViewDel
             self.collectionView.reloadData()
         }
         
-        // load with a partialcell to the left, full middle cell at center, and partialcell on the right
         
+        // MARK: Collection View Flow Layout
+        
+//        let screenSize = UIScreen.main.bounds
+//        
+//        let collectionViewFlowLayout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
+//        collectionViewFlowLayout.itemSize = CGSize(width: screenSize.width / 2.0, height: screenSize.height / 2.0)
+//        collectionViewFlowLayout.minimumInteritemSpacing = 0.0
+//        collectionViewFlowLayout.minimumLineSpacing = 20.0
+//        
+//        let mainSectionInset = screenSize.width / 4.0
+//        collectionViewFlowLayout.sectionInset = UIEdgeInsetsMake(0.0, mainSectionInset, 0.0, mainSectionInset)
+//        
+//        let tabCollectionViewFlowLayout = tabCollectionView.collectionViewLayout as! UICollectionViewFlowLayout
+//        
+//        let iconHeight = tabCollectionView.frame.height - 20.0
+//        tabCollectionViewFlowLayout.itemSize = CGSize(width: iconHeight, height: iconHeight)
+//        tabCollectionViewFlowLayout.minimumInteritemSpacing = 0.0
+//        tabCollectionViewFlowLayout.minimumLineSpacing = 50.0
+//        
+//        let tabSectionInset = mainSectionInset + (collectionViewFlowLayout.itemSize.width - tabCollectionViewFlowLayout.itemSize.width) / 2.0
+//        tabCollectionViewFlowLayout.sectionInset = UIEdgeInsetsMake(0.0, tabSectionInset, 0.0, tabSectionInset)
+//        
+//        // MARK: translucent Nav Bar
 //        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
 //        self.navigationController?.navigationBar.shadowImage = UIImage()
 //        self.navigationController?.navigationBar.isTranslucent = true
@@ -50,29 +72,25 @@ class Home_VC: UIViewController, UICollectionViewDataSource, UICollectionViewDel
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+
         
         if collectionView is TheChosenCollectionView {
-        
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MainCategoryCell", for: indexPath) as? Category_CollectionViewCell
-            
             
             // selects the category image from the categoryImages array above.
             cell?.imageView.image = UIImage(named:categoryImages[indexPath.row])
             
             // update category label from the categoryNames array above
             cell?.categoryLabel.text = categoryNames[indexPath.row]
-            
             return cell!
-        
+
         } else {
-        
-            let cell2 = collectionView.dequeueReusableCell(withReuseIdentifier: "TabCategoryCell", for: indexPath) as? TabCollectionViewCell
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TabCategoryCell", for: indexPath) as? TabCollectionViewCell
             
             // update category label for tabCollectionView
-            cell2?.tabLabel.text = categoryNames[indexPath.row]
-            
-            return cell2!
-            
+            cell?.tabLabel.text = categoryNames[indexPath.row]
+            return cell!
+
         }
     }
     
@@ -101,6 +119,24 @@ class Home_VC: UIViewController, UICollectionViewDataSource, UICollectionViewDel
     }
     
     
+    // MARK: Link the Collection Views
+    private func scrollViewDidScroll(scrollView: UIScrollView) {
+        
+        let collectionViewFlowLayout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
+        let tabCollectionViewFlowLayout = tabCollectionView.collectionViewLayout as! UICollectionViewFlowLayout
+        let mainDistanceBetweenItemsCenter = collectionViewFlowLayout.minimumLineSpacing + collectionViewFlowLayout.itemSize.width
+        let tabDistanceBetweenItemsCenter = tabCollectionViewFlowLayout.minimumLineSpacing + tabCollectionViewFlowLayout.itemSize.width
+        let offsetFactor = mainDistanceBetweenItemsCenter / tabDistanceBetweenItemsCenter
+        
+        if (scrollView == collectionView) {
+            let xOffset = scrollView.contentOffset.x - scrollView.frame.origin.x
+            tabCollectionView.contentOffset.x = xOffset / offsetFactor
+        }
+        else if (scrollView == tabCollectionView) {
+            let xOffset = scrollView.contentOffset.x - scrollView.frame.origin.x
+            collectionView.contentOffset.x = xOffset * offsetFactor
+        }
+    }
 }
 
 
