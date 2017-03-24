@@ -21,7 +21,7 @@ class Home_VC: UIViewController, UICollectionViewDataSource, UICollectionViewDel
     
     
     
-  
+    
     
     
     
