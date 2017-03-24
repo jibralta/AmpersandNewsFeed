@@ -17,33 +17,30 @@ class SelectedArticle: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-//        articleWebView.loadRequest(URLRequest(url: URL(string:"https://www.google.com/")!))
-        
-        
-        
         DispatchQueue.main.async {
-
-        if let url = URL(string: self.article.articleURL!) {
             
-            self.articleWebView.loadRequest(URLRequest(url: url))
+            if let url = URL(string: self.article.articleURL!) {
+                
+                self.articleWebView.loadRequest(URLRequest(url: url))
+                
+            }
             
-            print(url)
         }
-        
-        }
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.isTranslucent = true
     }
     
-
-
+    
+    
     
     
     @IBAction func backButtonPressed(_ sender: UIButton) {
         
         dismiss(animated: true, completion: nil)
-
+        
     }
-
+    
     
     
 }
