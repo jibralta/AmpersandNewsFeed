@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Home_VC: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+class Home_VC: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     // MARK:  IBOutlets
     
@@ -16,6 +16,8 @@ class Home_VC: UIViewController, UICollectionViewDataSource, UICollectionViewDel
     @IBOutlet weak var tabCollectionView: UICollectionView!
     
     // MARK: Array of Images for Category Menu.
+    
+    var home = String()
     
     let categoryImages = ["techcrunch", "national-geographic", "espn", "bloomberg", "mashable"]
     let categoryNames = ["TECHNOLOGY", "SCIENCE & NATURE", "SPORTS", "BUSINESS", "ENTERTAINMENT"]
@@ -27,10 +29,11 @@ class Home_VC: UIViewController, UICollectionViewDataSource, UICollectionViewDel
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let welcomeAlert = UIAlertController(title: "PRIVACY ALERT", message: "Allow the government to follow your every move.", preferredStyle: UIAlertControllerStyle.alert)
+        welcomeAlert.addAction(UIAlertAction(title: "Definitely", style: UIAlertActionStyle.default, handler: nil))
+        self.present(welcomeAlert, animated: true, completion: nil)
         DispatchQueue.main.async {
             self.collectionView.reloadData()
-        }
-        
         
         // MARK: Collection View Flow Layout
         
@@ -55,13 +58,20 @@ class Home_VC: UIViewController, UICollectionViewDataSource, UICollectionViewDel
 //        tabCollectionViewFlowLayout.sectionInset = UIEdgeInsetsMake(0.0, tabSectionInset, 0.0, tabSectionInset)
 //        
         
-        // MARK: translucent Nav Bar
+    }
+    }
+    
+    // MARK: translucent Nav Bar for Home Scene.
+
+    override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.isNavigationBarHidden = true
+
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         self.navigationController?.isNavigationBarHidden = false
     }
+    
     // MARK: CollectionView Data Source for both Collection Views
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -88,6 +98,10 @@ class Home_VC: UIViewController, UICollectionViewDataSource, UICollectionViewDel
             // updates category header above image. (tabCategoryCell temporarily uninstalled)
             cell?.categoryHeader.text = categoryNames[indexPath.row]
             cell?.categoryLabel.text = categoryNames[indexPath.row]
+//            self.navigationBar.topItem?.title = categoryNames[indexPath.row]
+//            self.navigationBar.topItem.title = category
+
+
             
             return cell!
 
@@ -96,9 +110,15 @@ class Home_VC: UIViewController, UICollectionViewDataSource, UICollectionViewDel
             
             // update category label for tabCollectionView
             cell?.tabLabel.text = categoryNames[indexPath.row]
+            
             return cell!
 
         }
+    }
+    
+    // MARK: COLLECTION VIEW UI
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 0, left: 10, bottom: -10, right: 0)
     }
     
     
@@ -121,6 +141,7 @@ class Home_VC: UIViewController, UICollectionViewDataSource, UICollectionViewDel
                 // send the articles of the selected category to the vertical feed scene.
                 
                 destination.sourceNameForURL = categoryImages[selectIndexPath.row]
+
                
             }
         }

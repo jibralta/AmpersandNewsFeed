@@ -9,7 +9,7 @@
 import UIKit
 
 class VerticalFeed_TVC: UITableViewController {
-    
+        
 //    @IBOutlet weak var categoryTitle: UINavigationItem!
     
     var articles = [Article]() // initializing the variable pulling data from the Article Class.
@@ -18,13 +18,14 @@ class VerticalFeed_TVC: UITableViewController {
 
     var selectIndexPath: IndexPath?
 
+
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+        
         let apiManager = GoogleAPIManager()
     
         apiManager.fetchArticle(source: sourceNameForURL) { ( articles) in
-            
+
             self.articles = articles
             
             DispatchQueue.main.async {
@@ -34,6 +35,7 @@ class VerticalFeed_TVC: UITableViewController {
         
     }
     
+
     
     // MARK: - Table view data source
 
@@ -51,7 +53,14 @@ class VerticalFeed_TVC: UITableViewController {
 
         cell.verticalImage.image = nil
         cell.verticalTitle.text = articles[indexPath.row].title
-        cell.infoLabel.text = articles[indexPath.row].newsOrigin! + "   •   " + articles[indexPath.row].publishedTime!
+        cell.infoLabel.text = articles[indexPath.row].newsOrigin!
+
+            
+//            articles[indexPath.row].categoryNames[indexPath.row]
+        
+//        categoryNames
+            //            + " • " + articles[indexPath.row].publishedTime!
+        // sourceNameForURL + " • " +
         
         articles[indexPath.row].downloadImage(imageURL: articles[indexPath.row].imageURL!){ (image) in
            
@@ -82,9 +91,16 @@ class VerticalFeed_TVC: UITableViewController {
             
                 destination.article = articles[selectIndexPath.row]
         }
+            
+
     }
 
 }
+    
+
+
+    
+    
 
 }
 

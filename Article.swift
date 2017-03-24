@@ -16,6 +16,8 @@ class Article: NSObject {
     var publishedTime: String?
     var articleURL: String?
     
+    let categoryNames = ["TECHNOLOGY", "SCIENCE & NATURE", "SPORTS", "BUSINESS", "ENTERTAINMENT"]
+
     init(imageURL: String?, title: String?, newsOrigin: String?, publishedTime: String?, articleURL: String?) {
         self.imageURL = imageURL
         self.title = title
