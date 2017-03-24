@@ -1,6 +1,7 @@
 # Ampersand
 
 # PURPOSE: News feed 
+
 # MAJOR FEATURES:
 ## `UICollectionView`
 for News Category Feed (horizonatal feed)
