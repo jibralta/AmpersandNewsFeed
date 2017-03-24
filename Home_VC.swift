@@ -54,12 +54,14 @@ class Home_VC: UIViewController, UICollectionViewDataSource, UICollectionViewDel
 //        let tabSectionInset = mainSectionInset + (collectionViewFlowLayout.itemSize.width - tabCollectionViewFlowLayout.itemSize.width) / 2.0
 //        tabCollectionViewFlowLayout.sectionInset = UIEdgeInsetsMake(0.0, tabSectionInset, 0.0, tabSectionInset)
 //        
-//        // MARK: translucent Nav Bar
-//        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
-//        self.navigationController?.navigationBar.shadowImage = UIImage()
-//        self.navigationController?.navigationBar.isTranslucent = true
+        
+        // MARK: translucent Nav Bar
+        self.navigationController?.isNavigationBarHidden = true
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        self.navigationController?.isNavigationBarHidden = false
+    }
     // MARK: CollectionView Data Source for both Collection Views
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -85,6 +87,7 @@ class Home_VC: UIViewController, UICollectionViewDataSource, UICollectionViewDel
             
             // updates category header above image. (tabCategoryCell temporarily uninstalled)
             cell?.categoryHeader.text = categoryNames[indexPath.row]
+            cell?.categoryLabel.text = categoryNames[indexPath.row]
             
             return cell!
 
@@ -118,6 +121,7 @@ class Home_VC: UIViewController, UICollectionViewDataSource, UICollectionViewDel
                 // send the articles of the selected category to the vertical feed scene.
                 
                 destination.sourceNameForURL = categoryImages[selectIndexPath.row]
+               
             }
         }
     }

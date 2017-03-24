@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="cEu-Yi-x6C">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="4Zq-a6-MND">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -35,7 +35,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MainCategoryCell" id="UDz-8K-JaN" customClass="Category_CollectionViewCell" customModule="AmpersandNewsFeed" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="35" width="275" height="478"/>
+                                        <rect key="frame" x="0.0" y="3" width="275" height="478"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="275" height="478"/>
@@ -100,7 +100,7 @@
                                 </connections>
                             </collectionView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LOGO" translatesAutoresizingMaskIntoConstraints="NO" id="cva-vm-IBN">
-                                <rect key="frame" x="16" y="28" width="41" height="73"/>
+                                <rect key="frame" x="16" y="72" width="41" height="73"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="cva-vm-IBN" secondAttribute="height" multiplier="50:89" id="7EF-aX-fGB"/>
                                     <constraint firstAttribute="width" constant="41" id="Oug-VA-TIo"/>
@@ -198,7 +198,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rrV-eu-s3p" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1966.875" y="-611.61971830985919"/>
+            <point key="canvasLocation" x="3961.875" y="-611.61971830985919"/>
         </scene>
         <!--Vertical FeedTVC-->
         <scene sceneID="Ugp-CD-0Pf">
@@ -208,16 +208,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                        <navigationBar key="tableHeaderView" hidden="YES" contentMode="scaleToFill" id="bNA-Cg-0a8">
-                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            <items>
-                                <navigationItem title="Title" id="WdI-zv-bln"/>
-                            </items>
-                        </navigationBar>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ArticleCell" rowHeight="358" id="Rt6-yv-usB" customClass="Article_TVC" customModule="AmpersandNewsFeed" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="72" width="320" height="358"/>
+                                <rect key="frame" x="0.0" y="28" width="320" height="358"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Rt6-yv-usB" id="k75-Ue-jZn">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="357"/>
@@ -289,7 +282,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mxp-Lz-4p2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2718.75" y="-611.61971830985919"/>
+            <point key="canvasLocation" x="4713.75" y="-611.61971830985919"/>
         </scene>
         <!--Selected Article-->
         <scene sceneID="2k6-40-hYb">
@@ -306,16 +299,19 @@
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zeE-D2-DW0">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="delegate" destination="f7v-Hl-Kwy" id="1Yw-zP-DsS"/>
+                                </connections>
                             </webView>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gwW-qW-6I0">
-                                <rect key="frame" x="15" y="527" width="26" height="26"/>
+                                <rect key="frame" x="15" y="532" width="21" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="26" id="SQ1-kq-tDz"/>
-                                    <constraint firstAttribute="width" constant="26" id="iJV-b3-Rrr"/>
+                                    <constraint firstAttribute="height" constant="21" id="SQ1-kq-tDz"/>
+                                    <constraint firstAttribute="width" constant="21" id="iJV-b3-Rrr"/>
                                 </constraints>
                                 <state key="normal" title="Button" image="DISMISS"/>
                                 <connections>
-                                    <action selector="backButtonPressed:" destination="f7v-Hl-Kwy" eventType="touchUpInside" id="ppO-Ur-2Mq"/>
+                                    <action selector="dismissButtonPressed:" destination="f7v-Hl-Kwy" eventType="touchUpInside" id="Bs3-Ya-xRu"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -328,6 +324,11 @@
                             <constraint firstItem="zeE-D2-DW0" firstAttribute="leading" secondItem="fBU-Hg-3N6" secondAttribute="leading" id="mHY-6E-C0v"/>
                             <constraint firstAttribute="trailing" secondItem="zeE-D2-DW0" secondAttribute="trailing" id="qry-pt-zBd"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="gwW-qW-6I0"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="articleWebView" destination="zeE-D2-DW0" id="T1E-As-lfE"/>
@@ -335,22 +336,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JER-7X-ysc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3538.125" y="-611.61971830985919"/>
+            <point key="canvasLocation" x="5533.125" y="-611.61971830985919"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="GJv-Cy-P0e">
+        <scene sceneID="76U-0J-SC0">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Wom-ep-SNe" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cjH-3H-HbK" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4Zq-a6-MND" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="fR3-CZ-3tL">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="yPL-gB-3m1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="cEu-Yi-x6C" kind="relationship" relationship="rootViewController" id="N6j-cc-8N2"/>
+                    </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hbw-tG-a1i" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="969.375" y="-611.61971830985919"/>
+            <point key="canvasLocation" x="3219" y="-612"/>
         </scene>
     </scenes>
     <resources>

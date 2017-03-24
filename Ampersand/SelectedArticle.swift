@@ -22,25 +22,17 @@ class SelectedArticle: UIViewController {
             if let url = URL(string: self.article.articleURL!) {
                 
                 self.articleWebView.loadRequest(URLRequest(url: url))
-                
             }
             
         }
-        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
-        self.navigationController?.navigationBar.shadowImage = UIImage()
-        self.navigationController?.navigationBar.isTranslucent = true
+        
+//        self.navigationController?.isNavigationBarHidden = false
+
     }
     
-    
-    
-    
-    
-    @IBAction func backButtonPressed(_ sender: UIButton) {
+
+    @IBAction func dismissButtonPressed(_ sender: UIButton) {
         
-        dismiss(animated: true, completion: nil)
-        
+                dismiss(animated: true, completion: nil)
     }
-    
-    
-    
 }
