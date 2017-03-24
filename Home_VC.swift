@@ -10,34 +10,19 @@ import UIKit
 
 class Home_VC: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
-    //button for alert
-    @IBAction func buttonPressWelcome(_ sender: UIButton) {
-        let alertController = UIAlertController(title: "WELCOME!", message: "Have a nice day!", preferredStyle:UIAlertControllerStyle.alert)
-        
-        alertController.addAction(UIAlertAction(title: "You too!", style: UIAlertActionStyle.destructive, handler: nil))
-        
-        self.present(alertController,animated: true, completion: nil)
-    }
-    
-    
-    
-    
-    
-    
-    
+    // MARK:  IBOutlets
     
     @IBOutlet weak var collectionView: UICollectionView!
-    
     @IBOutlet weak var tabCollectionView: UICollectionView!
     
-    // MARK: Array of Images for Category Menu. Not pulling image from url.
+    // MARK: Array of Images for Category Menu.
+    
     let categoryImages = ["techcrunch", "national-geographic", "espn", "bloomberg", "mashable"]
     let categoryNames = ["TECHNOLOGY", "SCIENCE & NATURE", "SPORTS", "BUSINESS", "ENTERTAINMENT"]
     
     var selectIndexPath: IndexPath?
     
     var articles = [Article]()
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,6 +36,7 @@ class Home_VC: UIViewController, UICollectionViewDataSource, UICollectionViewDel
     // MARK: CollectionView Data Source for both Collection Views
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        
         if collectionView is TheChosenCollectionView {
             return categoryImages.count
         } else {
@@ -65,15 +51,11 @@ class Home_VC: UIViewController, UICollectionViewDataSource, UICollectionViewDel
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MainCategoryCell", for: indexPath) as? Category_CollectionViewCell
             
             
-            // selects the category image depending on the row selected in indexpath.
+            // selects the category image from the categoryImages array above.
             cell?.imageView.image = UIImage(named:categoryImages[indexPath.row])
             
-            // update category label
+            // update category label from the categoryNames array above
             cell?.categoryLabel.text = categoryNames[indexPath.row]
-            
-            //            // update url with source name
-            //            let sourceNameForURL = categoryImages[indexPath.row]
-            
             
             return cell!
             
@@ -81,12 +63,11 @@ class Home_VC: UIViewController, UICollectionViewDataSource, UICollectionViewDel
             
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TabCategoryCell", for: indexPath) as? TabCollectionViewCell
             
-            // update category label
+            // update category label for tabCollectionView
             let categoryName = categoryNames[indexPath.row]
             cell?.tabLabel.text = categoryName
             
             return cell!
-            
             
         }
     }
@@ -104,6 +85,7 @@ class Home_VC: UIViewController, UICollectionViewDataSource, UICollectionViewDel
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
         if let destination = segue.destination as? VerticalFeed_TVC {
             if let selectIndexPath = selectIndexPath {
                 

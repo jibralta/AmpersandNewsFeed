@@ -19,17 +19,7 @@ class VerticalFeed_TVC: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print("greeting")
-        let alertController = UIAlertController(title: "WELOCME!", message: "Have a nice day!", preferredStyle:UIAlertControllerStyle.alert)
-        alertController.addAction(UIAlertAction(title: "You too!", style: UIAlertActionStyle.destructive, handler: nil))
-        self.present(alertController,animated: true, completion: nil)
-        
-        
-        
-
         let apiManager = GoogleAPIManager()
-
-        // CLEAR CELL BEFORE...
         
         apiManager.fetchArticle(source: sourceNameForURL) { ( articles) in
             
@@ -38,7 +28,6 @@ class VerticalFeed_TVC: UITableViewController {
             DispatchQueue.main.async {
                 self.tableView.reloadData()
             }
-            
         }
     }
     
@@ -57,6 +46,8 @@ class VerticalFeed_TVC: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ArticleCell", for: indexPath) as! Article_TVC
 
         cell.verticalImage.image = nil
+        cell.verticalTitle.text = articles[indexPath.row].title
+        cell.infoLabel.text = articles[indexPath.row].newsOrigin! + "   •   " + articles[indexPath.row].publishedTime!
         
         articles[indexPath.row].downloadImage(imageURL: articles[indexPath.row].imageURL!){ (image) in
            
