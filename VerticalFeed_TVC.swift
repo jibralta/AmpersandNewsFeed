@@ -10,6 +10,8 @@ import UIKit
 
 class VerticalFeed_TVC: UITableViewController {
     
+    @IBOutlet weak var categoryTitle: UINavigationItem!
+    
     var articles = [Article]() // initializing the variable pulling data from the Article Class.
 
     var sourceNameForURL =  String()
@@ -29,8 +31,8 @@ class VerticalFeed_TVC: UITableViewController {
                 self.tableView.reloadData()
             }
         }
-//        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
-//        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.isTranslucent = true
     }
     
