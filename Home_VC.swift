@@ -80,8 +80,12 @@ class Home_VC: UIViewController, UICollectionViewDataSource, UICollectionViewDel
             // selects the category image from the categoryImages array above.
             cell?.imageView.image = UIImage(named:categoryImages[indexPath.row])
             
-            // update category label from the categoryNames array above
+            // update category label from the categoryNames array above. (temporarily uninstalled)
             cell?.categoryLabel.text = categoryNames[indexPath.row]
+            
+            // updates category header above image. (tabCategoryCell temporarily uninstalled)
+            cell?.categoryHeader.text = categoryNames[indexPath.row]
+            
             return cell!
 
         } else {
