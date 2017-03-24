@@ -1,18 +1,19 @@
-# Ampersand
+# PapaPuree
 
-# PURPOSE: News feed 
+# PURPOSE: Recipe List  
 
-# MAJOR FEATURES:
-## `UICollectionView`
+# Major Features:
+- `UICollectionView`
 for News Category Feed (horizonatal feed)
-## `UITableVIew`
+
+- 'UITableVIew`
 for articles of category (vertical feed)
-## 'WebVIew`
+
+- 'WebVIew`
 for direct link to web source.
 
-# MINOR FEATURES:
-Message alert
-Modified Navigation Bar
+# Minor Features:
+- Message alert
 
-# ISSUES/BUGS: 
+# Issues/Bugs: 
 If you have any issues, click here --> https://github.com/jibralta/AmpersandNewsFeed/issues
