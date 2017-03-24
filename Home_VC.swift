@@ -128,8 +128,7 @@ class Home_VC: UIViewController, UICollectionViewDataSource, UICollectionViewDel
         selectIndexPath = indexPath
         
         performSegue(withIdentifier: "ToVerticalFeed", sender: self)
-        self.navigationItem.title = ""
-
+                            
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
