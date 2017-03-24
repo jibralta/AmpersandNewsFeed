@@ -16,7 +16,7 @@ class SelectedArticle: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         DispatchQueue.main.async {
             
             if let url = URL(string: self.article.articleURL!) {

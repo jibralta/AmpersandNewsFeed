@@ -22,7 +22,7 @@ class VerticalFeed_TVC: UITableViewController {
         
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         self.navigationItem.title = navTitle
 
         let apiManager = GoogleAPIManager()
@@ -38,7 +38,6 @@ class VerticalFeed_TVC: UITableViewController {
         
     }
     
-
     
     // MARK: - Table view data source
 
@@ -98,12 +97,7 @@ class VerticalFeed_TVC: UITableViewController {
 
     }
 
-}
-    
-
-
-    
-    
+    }
 
 }
 
