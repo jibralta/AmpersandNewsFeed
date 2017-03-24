@@ -28,25 +28,25 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <inset key="scrollIndicatorInsets" minX="30" minY="0.0" maxX="30" maxY="0.0"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="I9S-wZ-ADh">
-                                    <size key="itemSize" width="300" height="498"/>
+                                    <size key="itemSize" width="300" height="450"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="30" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" reuseIdentifier="MainCategoryCell" id="UDz-8K-JaN" customClass="Category_CollectionViewCell" customModule="AmpersandNewsFeed" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="9" width="300" height="500"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MainCategoryCell" id="UDz-8K-JaN" customClass="Category_CollectionViewCell" customModule="AmpersandNewsFeed" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="35" width="275" height="478"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="300" height="500"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="275" height="478"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CATEGORY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ygF-hH-u8t">
-                                                    <rect key="frame" x="10" y="9" width="290" height="36"/>
+                                                    <rect key="frame" x="17" y="10" width="258" height="36"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="36" id="aph-Ax-nWk"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="30"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="28"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -61,7 +61,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="national-geographic" translatesAutoresizingMaskIntoConstraints="NO" id="5jA-rz-yTs">
-                                                    <rect key="frame" x="0.0" y="55" width="300" height="445"/>
+                                                    <rect key="frame" x="-0.5" y="56" width="275" height="422"/>
                                                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                 </imageView>
                                             </subviews>
@@ -72,15 +72,15 @@
                                             <constraint firstItem="h1T-Sy-OEN" firstAttribute="trailing" secondItem="5jA-rz-yTs" secondAttribute="trailing" id="G56-Pk-rTK"/>
                                             <constraint firstItem="5jA-rz-yTs" firstAttribute="leading" secondItem="UDz-8K-JaN" secondAttribute="leading" id="U5z-qy-MxP"/>
                                             <constraint firstItem="5jA-rz-yTs" firstAttribute="top" secondItem="ygF-hH-u8t" secondAttribute="bottom" constant="10" id="W5p-IJ-Dt9"/>
-                                            <constraint firstItem="5jA-rz-yTs" firstAttribute="top" secondItem="UDz-8K-JaN" secondAttribute="top" constant="55" id="XUr-6D-ImD"/>
                                             <constraint firstItem="h1T-Sy-OEN" firstAttribute="top" secondItem="5jA-rz-yTs" secondAttribute="top" id="cMq-x1-DSa"/>
+                                            <constraint firstItem="ygF-hH-u8t" firstAttribute="top" secondItem="UDz-8K-JaN" secondAttribute="top" constant="10" id="caA-tH-Aoa"/>
                                             <constraint firstAttribute="bottom" secondItem="5jA-rz-yTs" secondAttribute="bottom" id="fVc-3T-d8B"/>
+                                            <constraint firstItem="ygF-hH-u8t" firstAttribute="leading" secondItem="5jA-rz-yTs" secondAttribute="leading" constant="17" id="gZt-fo-MSc"/>
                                             <constraint firstAttribute="trailing" secondItem="5jA-rz-yTs" secondAttribute="trailing" id="lVr-mb-sJr"/>
                                             <constraint firstItem="5jA-rz-yTs" firstAttribute="trailing" secondItem="ygF-hH-u8t" secondAttribute="trailing" id="rcU-1I-Alt"/>
-                                            <constraint firstItem="5jA-rz-yTs" firstAttribute="leading" secondItem="ygF-hH-u8t" secondAttribute="leading" constant="-10" id="tj5-Nu-9jI"/>
                                             <constraint firstItem="h1T-Sy-OEN" firstAttribute="bottom" secondItem="5jA-rz-yTs" secondAttribute="bottom" id="uWo-PJ-UU2"/>
                                         </constraints>
-                                        <size key="customSize" width="300" height="500"/>
+                                        <size key="customSize" width="275" height="478"/>
                                         <variation key="default">
                                             <mask key="subviews">
                                                 <exclude reference="h1T-Sy-OEN"/>
@@ -126,7 +126,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="150" height="45"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="SCIENCE &amp; NATURE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QgA-po-pxz">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SCIENCE &amp; NATURE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QgA-po-pxz">
                                                     <rect key="frame" x="4" y="14" width="208" height="24"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -152,6 +152,11 @@
                                             <constraint firstItem="QgA-po-pxz" firstAttribute="leading" secondItem="h30-fa-dza" secondAttribute="leadingMargin" constant="-4" id="xNs-xX-5iB"/>
                                         </constraints>
                                         <size key="customSize" width="150" height="45"/>
+                                        <variation key="default">
+                                            <mask key="subviews">
+                                                <exclude reference="QgA-po-pxz"/>
+                                            </mask>
+                                        </variation>
                                         <connections>
                                             <outlet property="tabLabel" destination="QgA-po-pxz" id="oMl-Ql-EQT"/>
                                         </connections>
