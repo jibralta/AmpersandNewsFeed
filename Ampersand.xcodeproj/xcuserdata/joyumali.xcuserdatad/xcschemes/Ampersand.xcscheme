@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "E0B006FC1E80462F00D4C8E0"
-               BuildableName = "AmpersandNewsFeed.app"
-               BlueprintName = "AmpersandNewsFeed"
-               ReferencedContainer = "container:AmpersandNewsFeed.xcodeproj">
+               BuildableName = "Ampersand.app"
+               BlueprintName = "Ampersand"
+               ReferencedContainer = "container:Ampersand.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E0B006FC1E80462F00D4C8E0"
-            BuildableName = "AmpersandNewsFeed.app"
-            BlueprintName = "AmpersandNewsFeed"
-            ReferencedContainer = "container:AmpersandNewsFeed.xcodeproj">
+            BuildableName = "Ampersand.app"
+            BlueprintName = "Ampersand"
+            ReferencedContainer = "container:Ampersand.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -56,9 +56,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E0B006FC1E80462F00D4C8E0"
-            BuildableName = "AmpersandNewsFeed.app"
-            BlueprintName = "AmpersandNewsFeed"
-            ReferencedContainer = "container:AmpersandNewsFeed.xcodeproj">
+            BuildableName = "Ampersand.app"
+            BlueprintName = "Ampersand"
+            ReferencedContainer = "container:Ampersand.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -75,9 +75,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E0B006FC1E80462F00D4C8E0"
-            BuildableName = "AmpersandNewsFeed.app"
-            BlueprintName = "AmpersandNewsFeed"
-            ReferencedContainer = "container:AmpersandNewsFeed.xcodeproj">
+            BuildableName = "Ampersand.app"
+            BlueprintName = "Ampersand"
+            ReferencedContainer = "container:Ampersand.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

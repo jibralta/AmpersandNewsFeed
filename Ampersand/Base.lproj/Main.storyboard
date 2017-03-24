@@ -14,7 +14,7 @@
         <!--HomeVC-->
         <scene sceneID="DNW-Y9-xrf">
             <objects>
-                <viewController id="cEu-Yi-x6C" customClass="Home_VC" customModule="AmpersandNewsFeed" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="cEu-Yi-x6C" customClass="Home_VC" customModule="Ampersand" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hGn-vr-L1W"/>
                         <viewControllerLayoutGuide type="bottom" id="pfI-QR-xLL"/>
@@ -23,7 +23,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="7Yj-bD-xgh" userLabel="Main Collection View" customClass="TheChosenCollectionView" customModule="AmpersandNewsFeed" customModuleProvider="target">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="7Yj-bD-xgh" userLabel="Main Collection View" customClass="TheChosenCollectionView" customModule="Ampersand" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="50" width="320" height="518"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <inset key="scrollIndicatorInsets" minX="30" minY="0.0" maxX="30" maxY="0.0"/>
@@ -34,7 +34,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="30" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MainCategoryCell" id="UDz-8K-JaN" customClass="Category_CollectionViewCell" customModule="AmpersandNewsFeed" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MainCategoryCell" id="UDz-8K-JaN" customClass="Category_CollectionViewCell" customModule="Ampersand" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="35" width="275" height="478"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -119,7 +119,7 @@
                                     <inset key="sectionInset" minX="5" minY="0.0" maxX="5" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TabCategoryCell" id="h30-fa-dza" customClass="TabCollectionViewCell" customModule="AmpersandNewsFeed" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TabCategoryCell" id="h30-fa-dza" customClass="TabCollectionViewCell" customModule="Ampersand" customModuleProvider="target">
                                         <rect key="frame" x="5" y="0.0" width="150" height="45"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -203,13 +203,13 @@
         <!--Vertical FeedTVC-->
         <scene sceneID="Ugp-CD-0Pf">
             <objects>
-                <tableViewController id="iBe-BC-053" customClass="VerticalFeed_TVC" customModule="AmpersandNewsFeed" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="iBe-BC-053" customClass="VerticalFeed_TVC" customModule="Ampersand" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="384" sectionHeaderHeight="28" sectionFooterHeight="28" id="TG6-7L-Wvp">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ArticleCell" rowHeight="353" id="Rt6-yv-usB" customClass="Article_TVC" customModule="AmpersandNewsFeed" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ArticleCell" rowHeight="353" id="Rt6-yv-usB" customClass="Article_TVC" customModule="Ampersand" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="320" height="353"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Rt6-yv-usB" id="k75-Ue-jZn">
@@ -312,7 +312,7 @@
         <!--Selected Article-->
         <scene sceneID="2k6-40-hYb">
             <objects>
-                <viewController id="f7v-Hl-Kwy" customClass="SelectedArticle" customModule="AmpersandNewsFeed" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="f7v-Hl-Kwy" customClass="SelectedArticle" customModule="Ampersand" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="vOe-R3-0xY"/>
                         <viewControllerLayoutGuide type="bottom" id="U9i-27-nQz"/>

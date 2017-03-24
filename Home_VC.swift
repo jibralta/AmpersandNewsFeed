@@ -65,11 +65,13 @@ class Home_VC: UIViewController, UICollectionViewDataSource, UICollectionViewDel
 
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.isNavigationBarHidden = true
+        self.navigationItem.title = ""
 
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         self.navigationController?.isNavigationBarHidden = false
+
     }
     
     // MARK: CollectionView Data Source for both Collection Views
