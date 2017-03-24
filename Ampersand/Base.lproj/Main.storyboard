@@ -50,6 +50,17 @@
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hwh-WW-Zwr">
+                                                    <rect key="frame" x="-274" y="152" width="922" height="579"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="black" pointSize="39"/>
+                                                    <state key="normal" title="Button">
+                                                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="buttonPressWelcome:" destination="cEu-Yi-x6C" eventType="touchUpInside" id="cMB-m6-laS"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                         </view>
                                         <color key="backgroundColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -136,16 +147,16 @@
             </objects>
             <point key="canvasLocation" x="-26.399999999999999" y="-611.24437781109452"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Vertical FeedTVC-->
         <scene sceneID="Ugp-CD-0Pf">
             <objects>
-                <tableViewController id="iBe-BC-053" sceneMemberID="viewController">
+                <tableViewController id="iBe-BC-053" customClass="VerticalFeed_TVC" customModule="AmpersandNewsFeed" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="311" sectionHeaderHeight="28" sectionFooterHeight="28" id="TG6-7L-Wvp">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="311" id="Rt6-yv-usB">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ArticleCell" rowHeight="311" id="Rt6-yv-usB" customClass="Article_TVC" customModule="AmpersandNewsFeed" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="311"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Rt6-yv-usB" id="k75-Ue-jZn">
@@ -156,6 +167,9 @@
                                             <rect key="frame" x="8" y="8" width="26" height="26"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <state key="normal" title="Button" image="backButtonAmper"/>
+                                            <connections>
+                                                <action selector="backButtonPressed:" destination="Rt6-yv-usB" eventType="touchUpInside" id="mPH-Fy-jQH"/>
+                                            </connections>
                                         </button>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bloomberg" translatesAutoresizingMaskIntoConstraints="NO" id="jln-KZ-Thn">
                                             <rect key="frame" x="8" y="8" width="359" height="197"/>
@@ -177,6 +191,11 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="infoLabel" destination="szR-UI-FLV" id="L8m-4O-Z8u"/>
+                                    <outlet property="verticalImage" destination="jln-KZ-Thn" id="oeu-Fn-bm1"/>
+                                    <outlet property="verticalTitle" destination="V1I-Ce-Gng" id="deF-Bi-YfY"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -215,6 +234,9 @@
                                     <constraint firstAttribute="width" constant="26" id="iJV-b3-Rrr"/>
                                 </constraints>
                                 <state key="normal" title="Button" image="DISMISS"/>
+                                <connections>
+                                    <action selector="backButtonPressed:" destination="f7v-Hl-Kwy" eventType="touchUpInside" id="ppO-Ur-2Mq"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.50196081400000003" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>

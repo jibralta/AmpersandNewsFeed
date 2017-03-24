@@ -25,12 +25,11 @@ class Article: NSObject {
         
     }
     
-    
     // Create function for loading Image.
     
-    func downloadImage(completion: @escaping (UIImage) -> Void) {
+    func downloadImage(imageURL: String, completion: @escaping (UIImage) -> Void) {
         
-        guard let foundImageURL = URL(string: imageURL!) else { return }
+        guard let foundImageURL = URL(string: imageURL) else { return }
         
         let task = URLSession.shared.dataTask(with: foundImageURL) { (data, response, error) in
             

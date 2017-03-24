@@ -10,6 +10,22 @@ import UIKit
 
 class Home_VC: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
+    //button for alert
+    @IBAction func buttonPressWelcome(_ sender: UIButton) {
+        let alertController = UIAlertController(title: "WELCOME!", message: "Have a nice day!", preferredStyle:UIAlertControllerStyle.alert)
+        
+        alertController.addAction(UIAlertAction(title: "You too!", style: UIAlertActionStyle.destructive, handler: nil))
+        
+        self.present(alertController,animated: true, completion: nil)
+    }
+    
+    
+    
+  
+    
+    
+    
+    
     @IBOutlet weak var collectionView: UICollectionView!
     
     @IBOutlet weak var tabCollectionView: UICollectionView!
@@ -20,7 +36,7 @@ class Home_VC: UIViewController, UICollectionViewDataSource, UICollectionViewDel
     
     var selectIndexPath: IndexPath?
     
-    //    var articles = [Article]()
+    var articles = [Article]()
     
     
     override func viewDidLoad() {
@@ -29,9 +45,10 @@ class Home_VC: UIViewController, UICollectionViewDataSource, UICollectionViewDel
         DispatchQueue.main.async {
             self.collectionView.reloadData()
         }
+        
     }
     
-    // MARK: CollectionView Data Source
+    // MARK: CollectionView Data Source for both Collection Views
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView is TheChosenCollectionView {
@@ -49,12 +66,14 @@ class Home_VC: UIViewController, UICollectionViewDataSource, UICollectionViewDel
             
             
             // selects the category image depending on the row selected in indexpath.
-            let image = categoryImages[indexPath.row]
-            cell?.imageView.image = UIImage(named: image)
+            cell?.imageView.image = UIImage(named:categoryImages[indexPath.row])
             
             // update category label
-            let categoryName = categoryNames[indexPath.row]
-            cell?.categoryLabel.text = categoryName
+            cell?.categoryLabel.text = categoryNames[indexPath.row]
+            
+            //            // update url with source name
+            //            let sourceNameForURL = categoryImages[indexPath.row]
+            
             
             return cell!
             
@@ -72,17 +91,28 @@ class Home_VC: UIViewController, UICollectionViewDataSource, UICollectionViewDel
         }
     }
     
-    func setCollectionViewDataSourceDelegate<D: UICollectionViewDataSource & UICollectionViewDelegate>
-        (dataSourceDelegate: D, forRow row: Int) {
+    
+    
+    // MARK: Segue
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        collectionView.delegate = dataSourceDelegate
-        collectionView.dataSource = dataSourceDelegate
-        collectionView.tag = row
-        collectionView.reloadData()
+        selectIndexPath = indexPath
+        
+        performSegue(withIdentifier: "ToVerticalFeed", sender: self)
         
     }
     
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? VerticalFeed_TVC {
+            if let selectIndexPath = selectIndexPath {
+                
+                // send the articles of the selected category to the vertical feed scene.
+                
+                destination.sourceNameForURL = categoryImages[selectIndexPath.row]
+            }
+        }
+    }
     
     
 }

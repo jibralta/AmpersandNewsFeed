@@ -9,13 +9,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Ampersand/GoogleAPIManager.swift"
-            timestampString = "511986646.426601"
+            filePath = "VerticalFeed_TVC.swift"
+            timestampString = "512012073.224629"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "41"
-            endingLineNumber = "41"
-            landmarkName = "fetchArticle(completion:)"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "tableView(_:numberOfRowsInSection:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -25,13 +25,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Ampersand/GoogleAPIManager.swift"
-            timestampString = "511986646.426601"
+            filePath = "VerticalFeed_TVC.swift"
+            timestampString = "512012073.224629"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "34"
-            endingLineNumber = "34"
-            landmarkName = "fetchArticle(completion:)"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
+            landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -41,60 +41,44 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Ampersand/GoogleAPIManager.swift"
-            timestampString = "511986646.426601"
+            filePath = "VerticalFeed_TVC.swift"
+            timestampString = "512012073.224629"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "16"
-            endingLineNumber = "16"
-            landmarkName = "GoogleAPIManager"
-            landmarkType = "3">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Ampersand/GoogleAPIManager.swift"
-            timestampString = "511986646.426601"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "13"
-            endingLineNumber = "13"
-            landmarkName = "GoogleAPIManager"
-            landmarkType = "3">
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
             <Locations>
                <Location
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "AmpersandNewsFeed.GoogleAPIManager.apiURL.getter : Swift.String"
+                  symbolName = "AmpersandNewsFeed.VerticalFeed_TVC.(viewDidLoad () -&gt; ()).(closure #1)"
                   moduleName = "AmpersandNewsFeed"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/joyumali/DevProjects_2017/AmpersandNewsFeed/Ampersand/GoogleAPIManager.swift"
-                  timestampString = "511998227.055107"
+                  urlString = "file:///Users/joyumali/DevProjects_2017/AmpersandNewsFeed/VerticalFeed_TVC.swift"
+                  timestampString = "512013302.079319"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "13"
-                  endingLineNumber = "13"
-                  offsetFromSymbolStart = "41">
+                  startingLineNumber = "38"
+                  endingLineNumber = "38"
+                  offsetFromSymbolStart = "66">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "AmpersandNewsFeed.GoogleAPIManager.init () -&gt; AmpersandNewsFeed.GoogleAPIManager"
+                  symbolName = "AmpersandNewsFeed.VerticalFeed_TVC.(viewDidLoad () -&gt; ()).(closure #1).(closure #1)"
                   moduleName = "AmpersandNewsFeed"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/joyumali/DevProjects_2017/AmpersandNewsFeed/Ampersand/GoogleAPIManager.swift"
-                  timestampString = "511998227.056384"
+                  urlString = "file:///Users/joyumali/DevProjects_2017/AmpersandNewsFeed/VerticalFeed_TVC.swift"
+                  timestampString = "512013302.080752"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "13"
-                  endingLineNumber = "13"
-                  offsetFromSymbolStart = "27">
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
+                  offsetFromSymbolStart = "12">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -105,13 +89,109 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Ampersand/GoogleAPIManager.swift"
-            timestampString = "511986646.426601"
+            filePath = "VerticalFeed_TVC.swift"
+            timestampString = "512012073.224629"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
-            landmarkName = "fetchArticle(completion:)"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AmpersandNewsFeed.VerticalFeed_TVC.(viewDidLoad () -&gt; ()).(closure #1)"
+                  moduleName = "AmpersandNewsFeed"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/joyumali/DevProjects_2017/AmpersandNewsFeed/VerticalFeed_TVC.swift"
+                  timestampString = "512013302.084068"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "252">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AmpersandNewsFeed.VerticalFeed_TVC.(viewDidLoad () -&gt; ()).(closure #1).(closure #1)"
+                  moduleName = "AmpersandNewsFeed"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/joyumali/DevProjects_2017/AmpersandNewsFeed/VerticalFeed_TVC.swift"
+                  timestampString = "512013302.085451"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "158">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "VerticalFeed_TVC.swift"
+            timestampString = "512012073.224629"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AmpersandNewsFeed.VerticalFeed_TVC.viewDidLoad () -&gt; ()"
+                  moduleName = "AmpersandNewsFeed"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/joyumali/DevProjects_2017/AmpersandNewsFeed/VerticalFeed_TVC.swift"
+                  timestampString = "512013302.0885"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "1110">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AmpersandNewsFeed.VerticalFeed_TVC.(viewDidLoad () -&gt; ()).(closure #1)"
+                  moduleName = "AmpersandNewsFeed"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/joyumali/DevProjects_2017/AmpersandNewsFeed/VerticalFeed_TVC.swift"
+                  timestampString = "512013302.089824"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "36"
+                  endingLineNumber = "36"
+                  offsetFromSymbolStart = "19">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "VerticalFeed_TVC.swift"
+            timestampString = "512012073.224629"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -121,13 +201,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Article.swift"
-            timestampString = "511831434.739396"
+            filePath = "VerticalFeed_TVC.swift"
+            timestampString = "512012073.224629"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "52"
-            endingLineNumber = "52"
-            landmarkName = "create(from:)"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -137,61 +217,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Article.swift"
-            timestampString = "511831398.390347"
+            filePath = "VerticalFeed_TVC.swift"
+            timestampString = "512012073.224629"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "57"
-            endingLineNumber = "57"
-            landmarkName = "create(from:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Article.swift"
-            timestampString = "511831398.390347"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "62"
-            endingLineNumber = "62"
-            landmarkName = "create(from:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Article.swift"
-            timestampString = "511831398.390347"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "67"
-            endingLineNumber = "67"
-            landmarkName = "create(from:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Article.swift"
-            timestampString = "511831398.390347"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "72"
-            endingLineNumber = "72"
-            landmarkName = "create(from:)"
+            startingLineNumber = "71"
+            endingLineNumber = "71"
+            landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

@@ -10,13 +10,9 @@ import UIKit
 
 class Article_TVC: UITableViewCell {
     
-    @IBOutlet weak var articleImage: UIImageView!
-    
-    @IBOutlet weak var articleTitle: UILabel!
-    
-    @IBOutlet weak var articleInfo: UILabel!
-    
-    @IBOutlet weak var articleBody: UITextView!
+    @IBOutlet weak var infoLabel: UILabel!
+    @IBOutlet weak var verticalTitle: UILabel!
+    @IBOutlet weak var verticalImage: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -28,5 +24,9 @@ class Article_TVC: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
+    @IBAction func backButtonPressed(_ sender: Any) {
+    }
+    
     
 }
