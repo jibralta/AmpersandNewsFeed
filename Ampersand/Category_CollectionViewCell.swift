@@ -20,15 +20,5 @@ class Category_CollectionViewCell: UICollectionViewCell {
         imageView.image = nil
     }
     
-//    func setCollectionViewDataSourceDelegate<D: UICollectionViewDataSource & UICollectionViewDelegate>
-//        (dataSourceDelegate: D, forRow row: Int) {
-//        
-//        collectionView.delegate = dataSourceDelegate
-//        collectionView.dataSource = dataSourceDelegate
-//        collectionView.tag = row
-//        collectionView.reloadData()
-//    }
-    
-    
     
 }

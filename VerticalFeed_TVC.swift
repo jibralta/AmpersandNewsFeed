@@ -12,64 +12,84 @@ class VerticalFeed_TVC: UITableViewController {
     
     var articles = [Article]() // initializing the variable pulling data from the Article Class.
 
+    var sourceNameForURL =  String()
+
+    var selectIndexPath: IndexPath?
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        print("greeting")
+        let alertController = UIAlertController(title: "WELOCME!", message: "Have a nice day!", preferredStyle:UIAlertControllerStyle.alert)
+        alertController.addAction(UIAlertAction(title: "You too!", style: UIAlertActionStyle.destructive, handler: nil))
+        self.present(alertController,animated: true, completion: nil)
+        
+        
+        
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
+        let apiManager = GoogleAPIManager()
 
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        // CLEAR CELL BEFORE...
+        
+        apiManager.fetchArticle(source: sourceNameForURL) { ( articles) in
+            
+            self.articles = articles
+            
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+            
+        }
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
-    
-//    func request()
-//    {
-//        let URL = URL(string: "https://newsapi.org/v1/articles?source=national-geographic&sortBy=top&apiKey=ea22065a86a84832bd357ce90368684f")
-//        let feedParser = MyFeedParser(feedURL: URL)
-//        feedParser.delegate = self
-//        feedParser.parser()
-//    }
-//    
-    
-
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return articles.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ArticleCell", for: indexPath)
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ArticleCell", for: indexPath) as! Article_TVC
 
-        // Configure the cell...
+        cell.verticalImage.image = nil
+        
+        articles[indexPath.row].downloadImage(imageURL: articles[indexPath.row].imageURL!){ (image) in
+           
+            DispatchQueue.main.async {
+            
+                cell.verticalImage.image = image
 
+            }
+
+        }
+        
         return cell
     }
 
+    // MARK: Segue
+
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        selectIndexPath = indexPath
+        
+        performSegue(withIdentifier: "ToSelectedArticle", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if let destination = segue.destination as? SelectedArticle {
+            if let selectIndexPath = selectIndexPath {
+            
+                destination.article = articles[selectIndexPath.row]
+        }
+    }
 
 }
 
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+}
 

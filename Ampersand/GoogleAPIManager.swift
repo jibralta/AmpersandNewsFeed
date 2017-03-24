@@ -8,15 +8,17 @@
 
 import Foundation
 
-class GoogleAPIManager {
-
-    let apiURL = "https://newsapi.org/v1/articles?source=national-geographic&sortBy=top&apiKey=ea22065a86a84832bd357ce90368684f"
-
+class GoogleAPIManager {    
     
     // fetch entire article.
-    func fetchArticle(completion: @escaping ([Article]) -> Void) { // ask how to grab the article body
+    func fetchArticle(source: String, completion: @escaping ([Article]) -> Void) { // ask how to grab the article body
         
-        guard let url = URL(string: apiURL) else { return }
+         let apiURL = "https://newsapi.org/v1/articles?source=" + source + "&sortBy=top&apiKey=ea22065a86a84832bd357ce90368684f"
+        
+        guard let url = URL(string: apiURL) else {
+            return
+        }
+        
         let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
             guard error == nil, let data = data else { return }
             
