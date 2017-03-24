@@ -31,6 +31,11 @@ class Home_VC: UIViewController, UICollectionViewDataSource, UICollectionViewDel
             self.collectionView.reloadData()
         }
         
+        // load with a partialcell to the left, full middle cell at center, and partialcell on the right
+        
+//        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+//        self.navigationController?.navigationBar.shadowImage = UIImage()
+//        self.navigationController?.navigationBar.isTranslucent = true
     }
     
     // MARK: CollectionView Data Source for both Collection Views
@@ -47,7 +52,7 @@ class Home_VC: UIViewController, UICollectionViewDataSource, UICollectionViewDel
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         if collectionView is TheChosenCollectionView {
-            
+        
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MainCategoryCell", for: indexPath) as? Category_CollectionViewCell
             
             
@@ -58,16 +63,15 @@ class Home_VC: UIViewController, UICollectionViewDataSource, UICollectionViewDel
             cell?.categoryLabel.text = categoryNames[indexPath.row]
             
             return cell!
-            
+        
         } else {
-            
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TabCategoryCell", for: indexPath) as? TabCollectionViewCell
+        
+            let cell2 = collectionView.dequeueReusableCell(withReuseIdentifier: "TabCategoryCell", for: indexPath) as? TabCollectionViewCell
             
             // update category label for tabCollectionView
-            let categoryName = categoryNames[indexPath.row]
-            cell?.tabLabel.text = categoryName
+            cell2?.tabLabel.text = categoryNames[indexPath.row]
             
-            return cell!
+            return cell2!
             
         }
     }
