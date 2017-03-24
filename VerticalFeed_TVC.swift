@@ -18,10 +18,13 @@ class VerticalFeed_TVC: UITableViewController {
 
     var selectIndexPath: IndexPath?
 
-
+    var navTitle = String()
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.navigationItem.title = navTitle
+
         let apiManager = GoogleAPIManager()
     
         apiManager.fetchArticle(source: sourceNameForURL) { ( articles) in

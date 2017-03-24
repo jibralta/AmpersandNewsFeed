@@ -98,8 +98,6 @@ class Home_VC: UIViewController, UICollectionViewDataSource, UICollectionViewDel
             // updates category header above image. (tabCategoryCell temporarily uninstalled)
             cell?.categoryHeader.text = categoryNames[indexPath.row]
             cell?.categoryLabel.text = categoryNames[indexPath.row]
-//            self.navigationBar.topItem?.title = categoryNames[indexPath.row]
-//            self.navigationBar.topItem.title = category
 
 
             
@@ -130,7 +128,8 @@ class Home_VC: UIViewController, UICollectionViewDataSource, UICollectionViewDel
         selectIndexPath = indexPath
         
         performSegue(withIdentifier: "ToVerticalFeed", sender: self)
-        
+        self.navigationItem.title = ""
+
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -141,6 +140,7 @@ class Home_VC: UIViewController, UICollectionViewDataSource, UICollectionViewDel
                 // send the articles of the selected category to the vertical feed scene.
                 
                 destination.sourceNameForURL = categoryImages[selectIndexPath.row]
+                destination.navTitle = categoryNames[selectIndexPath.row]
 
                
             }
