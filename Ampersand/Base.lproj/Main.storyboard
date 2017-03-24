@@ -7,6 +7,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -25,15 +26,15 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="7Yj-bD-xgh" userLabel="Main Collection View" customClass="TheChosenCollectionView" customModule="AmpersandNewsFeed" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="2" minimumInteritemSpacing="2" id="QGV-FK-3dM" customClass="CollectionFlowLayout" customModule="AmpersandNewsFeed" customModuleProvider="target">
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="2" id="QGV-FK-3dM" customClass="CollectionFlowLayout" customModule="AmpersandNewsFeed" customModuleProvider="target">
                                     <size key="itemSize" width="375" height="667"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="2" minY="0.0" maxX="2" maxY="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" reuseIdentifier="MainCategoryCell" id="UDz-8K-JaN" customClass="Category_CollectionViewCell" customModule="AmpersandNewsFeed" customModuleProvider="target">
-                                        <rect key="frame" x="2" y="0.0" width="375" height="667"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MainCategoryCell" id="UDz-8K-JaN" customClass="Category_CollectionViewCell" customModule="AmpersandNewsFeed" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -43,6 +44,9 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="350" height="667"/>
                                                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                 </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GRADIENT" translatesAutoresizingMaskIntoConstraints="NO" id="h1T-Sy-OEN">
+                                                    <rect key="frame" x="0.0" y="0.0" width="350" height="667"/>
+                                                </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="475-oP-VRX">
                                                     <rect key="frame" x="22" y="549" width="241" height="77"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -50,23 +54,16 @@
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hwh-WW-Zwr">
-                                                    <rect key="frame" x="-274" y="152" width="922" height="579"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" weight="black" pointSize="39"/>
-                                                    <state key="normal" title="Button">
-                                                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                    </state>
-                                                    <connections>
-                                                        <action selector="buttonPressWelcome:" destination="cEu-Yi-x6C" eventType="touchUpInside" id="cMB-m6-laS"/>
-                                                    </connections>
-                                                </button>
                                             </subviews>
                                         </view>
                                         <color key="backgroundColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
+                                            <constraint firstItem="h1T-Sy-OEN" firstAttribute="leading" secondItem="5jA-rz-yTs" secondAttribute="leading" id="1TZ-ak-RY1"/>
+                                            <constraint firstItem="h1T-Sy-OEN" firstAttribute="top" secondItem="5jA-rz-yTs" secondAttribute="top" id="6t3-Fm-gFW"/>
+                                            <constraint firstItem="h1T-Sy-OEN" firstAttribute="trailing" secondItem="5jA-rz-yTs" secondAttribute="trailing" id="G18-nR-zPn"/>
                                             <constraint firstItem="5jA-rz-yTs" firstAttribute="leading" secondItem="UDz-8K-JaN" secondAttribute="leading" id="U5z-qy-MxP"/>
                                             <constraint firstItem="5jA-rz-yTs" firstAttribute="top" secondItem="UDz-8K-JaN" secondAttribute="top" id="XUr-6D-ImD"/>
+                                            <constraint firstItem="h1T-Sy-OEN" firstAttribute="bottom" secondItem="5jA-rz-yTs" secondAttribute="bottom" id="dma-zu-ijS"/>
                                             <constraint firstAttribute="bottom" secondItem="5jA-rz-yTs" secondAttribute="bottom" id="fVc-3T-d8B"/>
                                             <constraint firstAttribute="trailing" secondItem="5jA-rz-yTs" secondAttribute="trailing" constant="25" id="lVr-mb-sJr"/>
                                         </constraints>
@@ -116,7 +113,7 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AmpersandHook" translatesAutoresizingMaskIntoConstraints="NO" id="cva-vm-IBN">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LOGO" translatesAutoresizingMaskIntoConstraints="NO" id="cva-vm-IBN">
                                 <rect key="frame" x="20" y="35" width="55" height="98"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="cva-vm-IBN" secondAttribute="height" multiplier="50:89" id="7EF-aX-fGB"/>
@@ -151,45 +148,60 @@
         <scene sceneID="Ugp-CD-0Pf">
             <objects>
                 <tableViewController id="iBe-BC-053" customClass="VerticalFeed_TVC" customModule="AmpersandNewsFeed" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="311" sectionHeaderHeight="28" sectionFooterHeight="28" id="TG6-7L-Wvp">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="358" sectionHeaderHeight="28" sectionFooterHeight="28" id="TG6-7L-Wvp">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ArticleCell" rowHeight="311" id="Rt6-yv-usB" customClass="Article_TVC" customModule="AmpersandNewsFeed" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="311"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ArticleCell" rowHeight="358" id="Rt6-yv-usB" customClass="Article_TVC" customModule="AmpersandNewsFeed" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="358"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Rt6-yv-usB" id="k75-Ue-jZn">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="310"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="357"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nFY-sg-mUf">
-                                            <rect key="frame" x="8" y="8" width="26" height="26"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" title="Button" image="backButtonAmper"/>
-                                            <connections>
-                                                <action selector="backButtonPressed:" destination="Rt6-yv-usB" eventType="touchUpInside" id="mPH-Fy-jQH"/>
-                                            </connections>
-                                        </button>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bloomberg" translatesAutoresizingMaskIntoConstraints="NO" id="jln-KZ-Thn">
-                                            <rect key="frame" x="8" y="8" width="359" height="197"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="national-geographic" translatesAutoresizingMaskIntoConstraints="NO" id="jln-KZ-Thn">
+                                            <rect key="frame" x="8" y="8" width="359" height="250"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="250" id="U6W-xz-SeA"/>
+                                                <constraint firstAttribute="height" relation="lessThanOrEqual" constant="250" id="iou-Lv-6Ae"/>
+                                                <constraint firstAttribute="height" constant="250" id="xK1-p8-VWg"/>
+                                            </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="31 of the Most Famous Photographers of all time" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V1I-Ce-Gng">
-                                            <rect key="frame" x="8" y="213" width="359" height="52"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="749" text="31 of the Most Famous Photographers of all time" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V1I-Ce-Gng">
+                                            <rect key="frame" x="8" y="263" width="359" height="41"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Source &amp; Published Date" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="szR-UI-FLV">
-                                            <rect key="frame" x="8" y="273" width="359" height="26"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Source &amp; Published Date" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="szR-UI-FLV">
+                                            <rect key="frame" x="8" y="309" width="359" height="43.5"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nFY-sg-mUf">
+                                            <rect key="frame" x="10" y="10" width="21" height="19"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" image="backButtonAmper"/>
+                                            <connections>
+                                                <action selector="backButtonPressed:" destination="Rt6-yv-usB" eventType="touchUpInside" id="mPH-Fy-jQH"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="szR-UI-FLV" firstAttribute="top" secondItem="V1I-Ce-Gng" secondAttribute="bottom" constant="5" id="3Oc-AJ-Vtm"/>
+                                        <constraint firstItem="szR-UI-FLV" firstAttribute="trailing" secondItem="V1I-Ce-Gng" secondAttribute="trailing" id="4jd-yf-DRx"/>
+                                        <constraint firstAttribute="topMargin" secondItem="jln-KZ-Thn" secondAttribute="top" id="J3N-ZZ-7QI"/>
+                                        <constraint firstItem="szR-UI-FLV" firstAttribute="top" secondItem="V1I-Ce-Gng" secondAttribute="bottom" constant="5" id="WPU-x3-5Hy"/>
+                                        <constraint firstItem="V1I-Ce-Gng" firstAttribute="leading" secondItem="jln-KZ-Thn" secondAttribute="leading" id="YHU-de-cgg"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="jln-KZ-Thn" secondAttribute="trailing" id="mxL-PO-Qqx"/>
+                                        <constraint firstAttribute="bottom" secondItem="szR-UI-FLV" secondAttribute="bottom" constant="5" id="pEh-7K-GR1"/>
+                                        <constraint firstItem="szR-UI-FLV" firstAttribute="leading" secondItem="V1I-Ce-Gng" secondAttribute="leading" id="sUi-wy-G6I"/>
+                                        <constraint firstAttribute="leadingMargin" secondItem="jln-KZ-Thn" secondAttribute="leading" id="vKq-rc-Exb"/>
+                                        <constraint firstItem="V1I-Ce-Gng" firstAttribute="top" secondItem="jln-KZ-Thn" secondAttribute="bottom" constant="5" id="vnL-32-3QZ"/>
+                                        <constraint firstItem="V1I-Ce-Gng" firstAttribute="trailing" secondItem="jln-KZ-Thn" secondAttribute="trailing" id="ywH-qg-Sym"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="infoLabel" destination="szR-UI-FLV" id="L8m-4O-Z8u"/>
@@ -259,10 +271,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="AmpersandHook" width="356" height="602"/>
         <image name="DISMISS" width="78" height="78"/>
+        <image name="GRADIENT" width="309" height="290"/>
+        <image name="LOGO" width="158" height="260"/>
         <image name="backButtonAmper" width="64" height="108"/>
-        <image name="bloomberg" width="1000" height="1250"/>
         <image name="national-geographic" width="1279" height="1024"/>
     </resources>
 </document>
