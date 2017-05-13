@@ -27,7 +27,7 @@ class VerticalFeed_TVC: UITableViewController {
 
         let apiManager = GoogleAPIManager()
     
-        apiManager.fetchArticle(source: sourceNameForURL) { ( articles) in
+        apiManager.fetchArticle(source: sourceNameForURL) { (articles) in
 
             self.articles = articles
             

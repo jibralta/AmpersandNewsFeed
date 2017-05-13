@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="4Zq-a6-MND">
-    <device id="retina4_0" orientation="landscape">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -20,11 +21,11 @@
                         <viewControllerLayoutGuide type="bottom" id="pfI-QR-xLL"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="R1v-Xw-sac">
-                        <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="7Yj-bD-xgh" userLabel="Main Collection View" customClass="TheChosenCollectionView" customModule="Ampersand" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="70" width="568" height="250"/>
+                                <rect key="frame" x="0.0" y="70" width="320" height="498"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <inset key="scrollIndicatorInsets" minX="30" minY="0.0" maxX="30" maxY="0.0"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="I9S-wZ-ADh">
@@ -35,7 +36,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MainCategoryCell" id="UDz-8K-JaN" customClass="Category_CollectionViewCell" customModule="Ampersand" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="-99" width="275" height="478"/>
+                                        <rect key="frame" x="0.0" y="25" width="275" height="478"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="275" height="478"/>
@@ -100,7 +101,7 @@
                                 </connections>
                             </collectionView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AmpersandHook" translatesAutoresizingMaskIntoConstraints="NO" id="cva-vm-IBN">
-                                <rect key="frame" x="16" y="28" width="23" height="41"/>
+                                <rect key="frame" x="16" y="28" width="41" height="73"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="cva-vm-IBN" secondAttribute="height" multiplier="50:89" id="7EF-aX-fGB"/>
                                 </constraints>
@@ -204,37 +205,37 @@
             <objects>
                 <tableViewController id="iBe-BC-053" customClass="VerticalFeed_TVC" customModule="Ampersand" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="384" sectionHeaderHeight="28" sectionFooterHeight="28" id="TG6-7L-Wvp">
-                        <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ArticleCell" rowHeight="353" id="Rt6-yv-usB" customClass="Article_TVC" customModule="Ampersand" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="568" height="353"/>
+                                <rect key="frame" x="0.0" y="28" width="320" height="353"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Rt6-yv-usB" id="k75-Ue-jZn">
-                                    <rect key="frame" x="0.0" y="0.0" width="568" height="353"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="353"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uz2-h0-fY2" userLabel="CardView">
-                                            <rect key="frame" x="13" y="13" width="542" height="332"/>
+                                            <rect key="frame" x="13" y="13" width="294" height="332"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="national-geographic" translatesAutoresizingMaskIntoConstraints="NO" id="jln-KZ-Thn">
-                                                    <rect key="frame" x="0.0" y="0.0" width="542" height="225"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="294" height="225"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="225" id="mhG-rM-D0L"/>
                                                     </constraints>
                                                 </imageView>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t1l-pF-lvk" userLabel="ViewForText">
-                                                    <rect key="frame" x="0.0" y="225" width="542" height="107"/>
+                                                    <rect key="frame" x="0.0" y="225" width="294" height="107"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="749" text="31 of the Most Famous Photographers of all time" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V1I-Ce-Gng">
-                                                            <rect key="frame" x="8" y="8" width="526" height="21.5"/>
+                                                            <rect key="frame" x="8" y="8" width="278" height="21.5"/>
                                                             <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Source &amp; Published Date" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="szR-UI-FLV">
-                                                            <rect key="frame" x="8" y="37.5" width="526" height="61.5"/>
+                                                            <rect key="frame" x="8" y="37.5" width="278" height="61.5"/>
                                                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
@@ -317,11 +318,11 @@
                         <viewControllerLayoutGuide type="bottom" id="U9i-27-nQz"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="fBU-Hg-3N6">
-                        <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zeE-D2-DW0">
-                                <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <outlet property="delegate" destination="f7v-Hl-Kwy" id="1Yw-zP-DsS"/>
@@ -365,7 +366,6 @@
         <!--Navigation Controller-->
         <scene sceneID="76U-0J-SC0">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="hbw-tG-a1i" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="4Zq-a6-MND" sceneMemberID="viewController">
                     <toolbarItems/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
@@ -383,6 +383,7 @@
                         <segue destination="cEu-Yi-x6C" kind="relationship" relationship="rootViewController" id="N6j-cc-8N2"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hbw-tG-a1i" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3152" y="-660"/>
         </scene>
