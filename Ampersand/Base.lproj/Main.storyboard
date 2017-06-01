@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="4Zq-a6-MND">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="4Zq-a6-MND">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -106,6 +106,16 @@
                                     <constraint firstAttribute="width" secondItem="cva-vm-IBN" secondAttribute="height" multiplier="50:89" id="7EF-aX-fGB"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ampersand News" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ji3-kF-dVi">
+                                <rect key="frame" x="63" y="73" width="195" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="61j-UK-SbM"/>
+                                    <constraint firstAttribute="width" constant="195" id="D2a-e1-bSz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="cvX-tb-7s4" userLabel="Tab Collection View">
                                 <rect key="frame" x="95" y="110" width="225" height="45"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -171,7 +181,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="7Yj-bD-xgh" secondAttribute="bottom" id="8sS-pV-GQR"/>
+                            <constraint firstItem="Ji3-kF-dVi" firstAttribute="top" secondItem="cva-vm-IBN" secondAttribute="top" constant="45" id="AFp-rw-cwK"/>
                             <constraint firstItem="cva-vm-IBN" firstAttribute="leading" secondItem="R1v-Xw-sac" secondAttribute="leading" constant="16" id="CNk-h8-Tgq"/>
+                            <constraint firstItem="Ji3-kF-dVi" firstAttribute="leading" secondItem="cva-vm-IBN" secondAttribute="trailing" constant="6" id="FpW-eE-2sz"/>
                             <constraint firstItem="cva-vm-IBN" firstAttribute="top" secondItem="hGn-vr-L1W" secondAttribute="bottom" constant="8" id="GTV-3A-Vye"/>
                             <constraint firstItem="7Yj-bD-xgh" firstAttribute="leading" secondItem="R1v-Xw-sac" secondAttribute="leading" id="KGE-x7-79c"/>
                             <constraint firstItem="7Yj-bD-xgh" firstAttribute="top" secondItem="hGn-vr-L1W" secondAttribute="bottom" constant="50" id="Ry8-Id-kZV"/>
